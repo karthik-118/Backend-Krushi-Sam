@@ -80,7 +80,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
+app.use(cors(corsOptions));  // ✅ this alone is enough for Express 5
 
 // JSON parsing
 app.use(express.json());
